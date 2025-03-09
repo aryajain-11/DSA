@@ -13,9 +13,8 @@ public class FibonacciSeries {
             i = j;
             j = next;
             System.out.println(next);
-            
-            
         }
+        sc.close();
     }
     
 }

@@ -14,6 +14,7 @@ public class Prime {
             }
             
         }
+        sc.close();
     }
     
 }
