@@ -18,9 +18,10 @@ public class TransposeOfMatrix {
         System.out.println("Input Matrix :  ");
         printMatrix(matrix);
         System.out.println("Transpose of matrix : ");
-       int ans [] [] = Transpose(matrix, r, c);
-       printMatrix(ans);
-        
+      // int ans [] [] = Transpose(matrix, r, c);
+       //printMatrix(ans);
+        transposeInPlace(matrix, r, c);
+        printMatrix(matrix);
 
     }
 
@@ -45,6 +46,18 @@ public class TransposeOfMatrix {
         }
         return ans;
         
+    }
+
+    static void transposeInPlace(int[][]matrix,int r, int c ){
+        for (int i = 0; i < c; i++) {
+            for (int j = i; j < r; j++) {
+                //swap matrix[i][j] , matrix [j][i]
+                int temp = matrix [i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+            
+        }
     }
     
 }
